@@ -1,0 +1,30 @@
+<script src="/static/js/admin/add-users.js"></script>
+<div class="bg-white row main-container">
+    <div class="d-flex justify-content-between mt-3">
+        <div class="ms-3 p-2 list_title ">Schedule Email</div>
+    </div>
+    <div class="row ms-5">
+        <div class="col-8 col-md-6 col-lg-4 mt-4">
+            <h5 class="addDetailsText ms-2">User Details</h5>
+            <div class="input-wrapper mt-4 ">
+                <label for="name" class="text-secondary">Name</label>
+                <input type="text" class="p-1 px-4" placeholder="Enter Name" id="user_name">
+            </div>
+            <div class="input-wrapper mt-2 ">
+                <label for="email" class="text-secondary">Email</label>
+                <input type="email" class="p-1 px-4" placeholder="Enter Email" id="user_email">
+            </div>
+            <div class="input-wrapper mt-2 ">
+                <label for="mobile" class="text-secondary">Mobile Number</label>
+                <input type="text" class="p-1 px-4" placeholder="Enter Mobile Number" id="user_mobile">
+            </div>     
+            <div class="input-wrapper mt-2 ">
+                <label for="datepicker" class="text-secondary">Schedule Date</label>
+                <input type="text" class="p-1 px-4" placeholder="Select Date" id="datepicker">
+            </div>        
+            <button class="float-end me-3 mt-4 fs-6 btn btn-primary px-4 mb-5" id="saveUser">SAVE <i class="bi bi-check"></i></button>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.6/dist/flatpickr.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.6/dist/themes/material_blue.css">

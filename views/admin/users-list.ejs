@@ -1,0 +1,71 @@
+<div class="bg-white row main-container p-4">
+    <div class="d-flex justify-content-between">
+        <div class="list_title">Scheduled Email List</div>       
+            <div class="row">
+                <a href="/admin/add-user" class="text-decoration-none btn btn-primary px-4">
+                    <span>Add Schedule Email </span>
+                    <img alt="add site" src="/static/images/add.svg" class="ms-2">
+                </a>
+            </div>       
+    </div>
+    <div class="table-responsive mt-3" >
+        <table class="table custombordercolor" id="userTable">
+            <thead>
+                <tr>
+                    <th scope="col">Sl NO</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>                   
+                    <th scope="col">Mobile</th>
+                    <th scope="col">Scheduled Date</th>                   
+                    <th scope="col">Actions</th>                             
+                </tr>
+            </thead>
+            <tbody>
+                <% for (var i=0; i < data.length; i++) { %>
+                    <tr>
+                        <td>
+                            <%= i+1; %>
+                        </td>
+                        <td>
+                            <%= data[i].name; %>
+                        </td>
+                        <td>
+                            <%= data[i].email; %>
+                        </td>                        
+                        <td>
+                            <%= data[i].mobile; %>
+                        </td>
+                        <td>
+                            <%= data[i].scheduled_date; %>
+                        </td>                      
+                            <td>
+                                <a href="/admin/edit-user/<%= Buffer.from("userList="+data[i].id).toString('base64')%>" class="text-decoration-none"> 
+                                    <img src="/static/images/pencil.svg" class="me-3" height="20" width="20">
+                                </a>
+                                <span style="cursor: pointer;"><img src="/static/images/remove.svg" class="delete_user" height="20" width="20" data-id="<%= data[i].id %>" data-bs-toggle="modal" data-bs-target="#deleteModal"></span>
+                            </td>                                 
+                        </tr>
+                    <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- delete modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Are You Sure?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are You Sure You Want to Delete this User?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" id="delete">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/static/js/admin/users.js"></script>

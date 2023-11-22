@@ -1,0 +1,115 @@
+<% if(emailTemplate=='PASSWORD' ) { %>
+    <html>
+
+    <head>
+        <title>PASSWORD</title>
+    </head>
+
+    <body style="background:#ccc;">
+        <table
+            style="width:90%; font-family:verdna; font-size:14px;border:solid 1px #dadada;background:#fff; margin:10px auto;">
+
+            <tr>
+                <td style="height:8px; width:2%;"></td>
+                <td style="height:8px; width:96%;"></td>
+                <td style="height:8px; width:2%;"></td>
+            </tr>
+            <tr>
+                <td style="width:2%;"></td>
+                <td style="width:96%;">Your login password is : <%= password %>.
+                </td>
+                <td style="width:2%;"></td>
+            </tr>
+            <tr>
+                <td style="width:2%;"></td>
+
+                <td style="width:2%;"></td>
+            </tr>
+            <tr>
+                <td style="width:2%;"></td>
+                <td style="width:96%;">-Ascentweb
+                </td>
+                <td style="width:2%;"></td>
+            </tr>
+            <tr>
+                <td style="height:8px; width:2%;"> </td>
+                <td style="height:8px; width:96%;"> </td>
+                <td style="height:8px; width:2%;"> </td>
+            </tr>
+            <tr>
+                <td style="width:2%;"></td>
+                <td style="width:96%;border-top:solid 1px #dadada;">
+                    <table>
+                        <tr>
+                            <td style="width:90%; font-size:14px;">© All rights reserved. ®</td>
+                            <td style="width:10%;">
+                                <table style="width:100%;">
+                                </table>
+                            </td>
+                            <td style="width:2%;"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+
+    </html>
+    <% } else{ %>
+        <html>
+
+        <head>
+            <title>Scheduled Email</title>
+        </head>
+
+        <body style="background:#ccc;">
+            <table
+                style="width:90%; font-family:verdna; font-size:14px;border:solid 1px #dadada;background:#fff; margin:10px auto;">
+
+                <tr>
+                    <td style="height:8px; width:2%;"></td>
+                    <td style="height:8px; width:96%;"></td>
+                    <td style="height:8px; width:2%;"></td>
+                </tr>
+                <tr>
+                    <td style="width:2%;"></td>
+                    <td style="width:96%;">Scheduled Email is : <%= message %>.
+                    </td>
+                    <td style="width:2%;"></td>
+                </tr>
+                <tr>
+                    <td style="width:2%;"></td>
+
+                    <td style="width:2%;"></td>
+                </tr>
+                <tr>
+                    <td style="width:2%;"></td>
+                    <td style="width:96%;">-ASCENT
+                    </td>
+                    <td style="width:2%;"></td>
+                </tr>
+                <tr>
+                    <td style="height:8px; width:2%;"> </td>
+                    <td style="height:8px; width:96%;"> </td>
+                    <td style="height:8px; width:2%;"> </td>
+                </tr>
+                <tr>
+                    <td style="width:2%;"></td>
+                    <td style="width:96%;border-top:solid 1px #dadada;">
+                        <table>
+                            <tr>
+                                <td style="width:90%; font-size:14px;">© All rights reserved. ®</td>
+                                <td style="width:10%;">
+                                    <table style="width:100%;">
+                                    </table>
+                                </td>
+                                <td style="width:2%;"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </body>
+
+        </html>
+        <% } %>
